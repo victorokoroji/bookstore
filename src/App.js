@@ -1,12 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+import BooksPage from '../pages/BooksPage'
+import CategoryPage from './pages/CategoryPage'
+import PageNotFound from './pages/PageNotFound'
+import Footer from './components/Footer'
+import Form from './components/Form'
 
-export default App;
+import Navbar from './Navbar'
+
+const App = () => (
+	<div className='main'>
+		<section>
+			<Navbar />
+			<Switch>
+				<Route exact path='/'>
+					<BooksPage />
+					<Form />
+				</Route>
+				<Route path='/categories'>
+					<CategoryPage />
+				</Route>
+			</Switch>
+		</section>
+		<section>
+			<Footer />
+		</section>
+	</div>
+)
+
+export default App
