@@ -1,9 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import BooksPage from '../pages/BooksPage'
+import BooksPage from './pages/BooksPage'
 import CategoryPage from './pages/CategoryPage'
-import PageNotFound from './pages/PageNotFound'
 import Footer from './components/Footer'
 import Form from './components/Form'
 
