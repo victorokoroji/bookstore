@@ -24,11 +24,7 @@ const bookReducer = (state = initialState, action = {}) => {
         books: payload,
       };
     case REMOVE_BOOK:
-      return {
-        ...state,
-        books: payload,
-      };
-
+      return state.filter((book) => book.id !== payload);
     default:
       return state;
   }

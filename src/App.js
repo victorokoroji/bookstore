@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CategoryPage from './pages/CategoryPage';
 import Footer from './components/Footer';
-import Form from './components/Form';
 import Navbar from './components/Navbar';
 
 const App = () => (
@@ -11,13 +10,8 @@ const App = () => (
     <section>
       <Navbar />
       <Routes>
-        <Route exact path="/">
-          <BooksPage />
-          <Form />
-        </Route>
-        <Route path="/categories">
-          <CategoryPage />
-        </Route>
+        <Route exact path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<CategoryPage />} />
       </Routes>
     </section>
     <section>

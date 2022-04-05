@@ -1,6 +1,7 @@
 import React from 'react';
 import Book from './Book';
 import store from '../redux/configureStore';
+import Form from './Form'
 
 const AllBooks = () => {
   const {
@@ -11,6 +12,7 @@ const AllBooks = () => {
       title, author, category, completed,
     } = book;
     return (
+      <>
       <Book
         key={Math.random()}
         completed={completed}
@@ -18,6 +20,8 @@ const AllBooks = () => {
         author={author}
         category={category}
       />
+         <Form />
+      </>
     );
   });
 
