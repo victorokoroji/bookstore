@@ -15,10 +15,10 @@ const Book = ({ title, author, category, completed }) => (
 )
 
 Book.propTypes = {
-	title: propTypes.string.isRequired,
-	author: propTypes.string.isRequired,
-	category: propTypes.string.isRequired,
-	completed: propTypes.string.isRequired,
+	title: propTypes.string,
+	author: propTypes.string,
+	category: propTypes.string,
+	completed: propTypes.string,
 }
 
 export default Book
