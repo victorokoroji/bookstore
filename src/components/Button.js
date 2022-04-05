@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = ({ type, children }) => (
-	<>
-		<button type={type}>{children}</button>
-	</>
-)
+const Button = ({ children }) => (
+  <>
+    <button type="button">{children}</button>
+  </>
+);
 
 Button.propTypes = {
-	type: PropTypes.string.isRequired,
-	children: PropTypes.string.isRequired,
-}
+  children: PropTypes.string.isRequired,
+};
 
-export default Button
+export default Button;

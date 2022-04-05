@@ -1,23 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Input = ({ type, name, placeholder}) => {
-	return (
-		<div>
-			<input
-				type={type}
-				name={name}
-				placeholder={placeholder}
-				value={value}
-			/>
-		</div>
-	)
-}
+const Input = ({ type, className, placeholder }) => (
+  <div>
+    <input type={type} className={className} placeholder={placeholder} />
+  </div>
+);
 
 Input.propTypes = {
-	type: PropTypes.string.isRequired,
-	name: PropTypes.string.isRequired,
-	placeholder: PropTypes.string.isRequired,
-}
+  type: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+};
 
-export default Input
+export default Input;

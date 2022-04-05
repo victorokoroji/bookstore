@@ -1,20 +1,19 @@
-import React from 'react'
-import Book from './Book'
-import Form from './Form'
+import React from 'react';
+import propTypes from 'prop-types';
+import Book from './Book';
+import Form from './Form';
 
-const AllBooks = ({ title, author, category, completed }) => {
-		return (
-			<>
-				<Book
-					key={Math.random()}
-					completed={completed}
-					title={title}
-					author={author}
-					category={category}
-				/>
-				<Form />
-			</>
-		)
-}
+const AllBooks = () => (
+  <>
+    <Book
+      key={Math.random()}
+      completed= ''
+      title= ''
+      author=''
+      category= ''
+    />
+    <Form />
+  </>
+);
 
-export default AllBooks
+export default AllBooks;
