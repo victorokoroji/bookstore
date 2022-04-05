@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CategoryPage from './pages/CategoryPage';
 import Footer from './components/Footer';
@@ -10,7 +10,7 @@ const App = () => (
   <div className="main">
     <section>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route exact path="/">
           <BooksPage />
           <Form />
@@ -18,7 +18,7 @@ const App = () => (
         <Route path="/categories">
           <CategoryPage />
         </Route>
-      </Switch>
+      </Routes>
     </section>
     <section>
       <Footer />

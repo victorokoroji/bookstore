@@ -1,6 +1,6 @@
 import React from 'react';
 import Book from './Book';
-import store from '../redux/categories/store';
+import store from '../redux/configureStore';
 
 const AllBooks = () => {
   const {
