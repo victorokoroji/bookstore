@@ -1,14 +1,14 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CategoryPage from './pages/CategoryPage';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 const App = () => (
   <div className="main">
     <section>
-      <Navbar />
+      <Header />
       <Routes>
         <Route exact path="/" element={<BooksPage />} />
         <Route path="/categories" element={<CategoryPage />} />

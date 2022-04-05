@@ -1,33 +1,25 @@
-import React from 'react';
-import ListItem from './ListItem';
+import React from 'react'
 
 const Navbar = () => {
-  const routes = [
-    { route: '/', name: 'Books' },
-    { route: '/categories', name: 'Categories' },
-  ];
 
-  const ListItems = () => (
-    routes.map((route, index) => (
-      <ListItem
-        key={Math.random()}
-        index={index}
-        name={route.name}
-        route={route.route}
-      />
-    ))
-  );
+	return (
+		<nav>
+			<div className='navBar'>
+				<h1>Bookstore CMS</h1>
+				<nav>
+					<ul>
+						<li>
+							<NavLink to='/'>BOOKS</NavLink>
+						</li>
+						<li>
+							<NavLink to='Categories'>CATEGORY</NavLink>
+						</li>
+					</ul>
+					<div className='icon'>.</div>
+				</nav>
+			</div>
+		</nav>
+	)
+}
 
-  return (
-    <nav>
-      <div>
-        <h1>Bookstore CMS</h1>
-        <ul>
-          {ListItems()}
-        </ul>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+export default Navbar
