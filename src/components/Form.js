@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import Input from './Input';
 import Option from './Option';
 
 const Form = () => {
@@ -16,20 +17,20 @@ const Form = () => {
   });
 
   return (
-    <div>
-      <h1>Add New Book</h1>
-      <form>
-        <input type="text" placeholder="Book title" className="book-title" />
-        <input type="text" placeholder="Auto" className="auto" />
-        <select name="books" id="books">
-          {Options()}
-        </select>
-        <Button type="button" className="add-book-btn">
-          ADD BOOK
-        </Button>
-      </form>
-    </div>
-  );
+		<div>
+			<h1>Add New Book</h1>
+			<form>
+				<Input type='text' placeholder='Book title' className='book-title' />
+				<Input type='text' placeholder='Auto' className='auto' />
+				<select name='books' id='books'>
+					{Options()}
+				</select>
+				<Button type='button' className='add-book-btn'>
+					ADD BOOK
+				</Button>
+			</form>
+		</div>
+	)
 };
 
 export default Form;
