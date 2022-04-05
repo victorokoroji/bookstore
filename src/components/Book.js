@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Button from './Button'
 
 const Book = ({ title, author, category, completed }) => (
 	<>
@@ -9,7 +10,7 @@ const Book = ({ title, author, category, completed }) => (
 			<li>{category}</li>
 			<li>{completed}</li>
 		</ul>
-		<button type='button'>Remove</button>
+		<Button type='button'>Remove</Button>
 	</>
 )
 

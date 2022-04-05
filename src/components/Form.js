@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 import Option from './Option';
 
 const Form = () => {
@@ -23,9 +24,9 @@ const Form = () => {
         <select name="books" id="books">
           {Options()}
         </select>
-        <button type="button" className="add-book-btn">
+        <Button type="button" className="add-book-btn">
           ADD BOOK
-        </button>
+        </Button>
       </form>
     </div>
   );
