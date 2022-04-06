@@ -17,10 +17,10 @@ const Book = ({
 );
 
 Book.propTypes = {
-  title: propTypes.string,
-  author: propTypes.string,
-  category: propTypes.string,
-  completed: propTypes.string,
+  title: propTypes.string.isRequired,
+  author: propTypes.string.isRequired,
+  category: propTypes.string.isRequired,
+  completed: propTypes.string.isRequired,
 };
 
 export default Book;
