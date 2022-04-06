@@ -1,24 +1,18 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CategoryPage from './pages/CategoryPage';
 import Footer from './components/Footer';
-import Form from './components/Form';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 
 const App = () => (
   <div className="main">
     <section>
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <BooksPage />
-          <Form />
-        </Route>
-        <Route path="/categories">
-          <CategoryPage />
-        </Route>
-      </Switch>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<CategoryPage />} />
+      </Routes>
     </section>
     <section>
       <Footer />

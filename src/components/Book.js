@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import Button from './Button';
 
 const Book = ({
   title, author, category, completed,
@@ -11,7 +12,7 @@ const Book = ({
       <li>{category}</li>
       <li>{completed}</li>
     </ul>
-    <button type="button">Remove</button>
+    <Button>Remove</Button>
   </>
 );
 

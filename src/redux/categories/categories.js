@@ -1,14 +1,25 @@
-const LOAD_BOOK_CATEGORY = 'bookstore/book/LOAD_BOOK_CATEGORY';
+const BOOK_STATUS = 'bookstore/categories/BOOK_STATUS';
 
-// Define reducer
-export default function categoryReducer(state = {}, action = {}) {
-  if (action.type === LOAD_BOOK_CATEGORY) {
-    return [...state].filter((book) => book.category === action.category);
+const initialState = {
+  categories: [],
+};
+
+export const checkStatus = (status) => ({
+  type: BOOK_STATUS,
+  payload: status,
+});
+
+const categoriesReducer = (state = initialState, action = {}) => {
+  const { payload } = action;
+  switch (action.type) {
+    case BOOK_STATUS:
+      return {
+        ...state,
+        status: payload,
+      };
+    default:
+      return state;
   }
-  return state;
-}
+};
 
-// Create actions
-export function loadBookCategory(category) {
-  return { type: LOAD_BOOK_CATEGORY, category };
-}
+export default categoriesReducer;
