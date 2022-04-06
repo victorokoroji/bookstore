@@ -1,18 +1,21 @@
-import React from 'react';
-import Book from './Book';
-import Form from './Form';
+import React from 'react'
+import Book from './Book'
+import Form from './Form'
+import { useSelector } from 'react-redux'
 
-const AllBooks = () => (
-  <>
-    <Book
-      key={Math.random()}
-      completed=""
-      title=""
-      author=""
-      category=""
-    />
-    <Form />
-  </>
-);
+import React from 'react'
 
-export default AllBooks;
+const AllBooks = () => {
+	const books = useSelector(state => state.bookReducer)
+	return (
+		<>
+			{books.map(book => (
+				<Book key={book.id} title={book.title} author={book.author} />
+			))}
+
+			<Form />
+		</>
+	)
+}
+
+export default AllBooks
