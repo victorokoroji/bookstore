@@ -1,17 +1,18 @@
+import {v4 as uuidV4} from 'uuid'
 const ADD_BOOK = 'bookstore/book/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/book/REMOVE_BOOK';
 
 const initialState = [
-  {
-    id: 1,
-    title: 'Romeo and Juliet',
-    author: 'Will Smith'
-  },
-  {
-    id: 2,
-    title: 'Things fall apart',
-    author: 'Chinua Achebe'
-  }
+	{
+		id: uuidV4(),
+		title: 'Romeo and Juliet',
+		author: 'Will Smith',
+	},
+	{
+		id: uuidV4(),
+		title: 'Things fall apart',
+		author: 'Chinua Achebe',
+	},
 ]
 
 
