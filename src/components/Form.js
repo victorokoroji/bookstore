@@ -2,8 +2,12 @@ import React from 'react';
 import Button from './Button';
 import Input from './Input';
 import Option from './Option';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
 const Form = () => {
+  const dispatch = useDispatch()
+
   const bookCategories = [
     { value: 'category1', content: 'Category 1' },
     { value: 'category2', content: 'Category 2' },
@@ -25,7 +29,7 @@ const Form = () => {
         <select name="books" id="books">
           {Options()}
         </select>
-        <Button type="button" className="add-book-btn">
+        <Button type="button" className="add-book-btn" onClick = {() => dispatch(addBook())}>
           ADD BOOK
         </Button>
       </form>
