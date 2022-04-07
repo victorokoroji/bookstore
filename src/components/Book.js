@@ -22,8 +22,7 @@ const Book = ({ book }) => {
 }
 
 Book.propTypes = {
-	title: propTypes.string.isRequired,
-	author: propTypes.string.isRequired,
+	book: propTypes.objectOf(propTypes.oneOfType([propTypes.string, propTypes.number])).isRequired
 }
 
 export default Book
