@@ -24,12 +24,11 @@ const Form = () => {
 	}
 
 	return (
-		const {title, author} = book
 		<div>
 			<h1>Add New Book</h1>
 			<form>
-				<Input type='text' name='title' value={title} placeholder='Book title' className='book-title' onChange={handleChange}/>
-				<Input type='text' name='author' value={author} placeholder='Author' className='author' onChange={handleChange}/>
+				<Input type='text' name='title' value={book.title} placeholder='Book title' className='book-title' onChange={handleChange}/>
+				<Input type='text' name='author' value={book.author} placeholder='Author' className='author' onChange={handleChange}/>
 				<Button type='button' className='add-book-btn' onClick={() => dispatch(addBook())}>
 					ADD BOOK
 				</Button>
