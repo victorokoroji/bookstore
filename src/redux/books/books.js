@@ -19,7 +19,7 @@ export const getBooks = () => async dispatch => {
 }
 
 export const addBook = book => async dispatch => {
-  try {
+	try {
 		const result = await bookServices.sendToServer(book)
 		dispatch({
 			type: ADD_BOOK,
@@ -28,13 +28,19 @@ export const addBook = book => async dispatch => {
 	} catch (error) {
 		return error
 	}
-
 }
 
-export const removeBook = id => async dispatch => ({
-	type: REMOVE_BOOK,
-	payload: id,
-})
+export const removeBook = id => async dispatch => {
+	try {
+		await bookServices.removeFromServer(id)
+		dispatch({
+			type: REMOVE_BOOK,
+			payload: id,
+		})
+	} catch (error) {
+		return error
+	}
+}
 
 const bookReducer = (state = initialState, action) => {
 	const { payload } = action
