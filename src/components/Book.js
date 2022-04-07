@@ -2,11 +2,11 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Button from './Button';
 
-const Book = ({ title, author }) => (
+const Book = ({book}) => (
   <>
     <ul>
-      <li>{title}</li>
-      <li>{author}</li>
+      <li>{book.title}</li>
+      <li>{book.author}</li>
     </ul>
     <Button>Remove</Button>
   </>

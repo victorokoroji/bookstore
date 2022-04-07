@@ -8,7 +8,7 @@ const AllBooks = () => {
   return (
     <>
       {books.map((book) => (
-        <Book key={book.id} title={book.title} author={book.author} />
+        <Book key={book.id} book={book} />
       ))}
 
       <Form />
