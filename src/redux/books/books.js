@@ -3,18 +3,7 @@ import { v4 as uuidV4 } from 'uuid'
 const ADD_BOOK = 'bookstore/book/ADD_BOOK'
 const REMOVE_BOOK = 'bookstore/book/REMOVE_BOOK'
 
-const initialState = [
-	{
-		id: uuidV4(),
-		title: 'Romeo and Juliet',
-		author: 'Will Smith',
-	},
-	{
-		id: uuidV4(),
-		title: 'Things fall apart',
-		author: 'Chinua Achebe',
-	},
-]
+const initialState = []
 
 export const addBook = book => ({
 	type: ADD_BOOK,
