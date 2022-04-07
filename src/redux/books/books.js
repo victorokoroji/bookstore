@@ -35,7 +35,7 @@ export const removeBook = id => async dispatch => {
 		await bookServices.removeFromServer(id)
 		dispatch({
 			type: REMOVE_BOOK,
-			payload: id,
+			payload: {id},
 		})
 	} catch (error) {
 		return error
@@ -45,10 +45,12 @@ export const removeBook = id => async dispatch => {
 const bookReducer = (state = initialState, action) => {
 	const { payload } = action
 	switch (action.type) {
+		case GET_BOOKS: 
+			return payload
 		case ADD_BOOK:
 			return [...state, payload]
 		case REMOVE_BOOK:
-			return state.filter(book => book.id !== payload)
+			return state.filter(book => book.id !== payload.id)
 		default:
 			return state
 	}
