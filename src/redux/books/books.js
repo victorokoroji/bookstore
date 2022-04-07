@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type'
 import { v4 as uuidV4 } from 'uuid'
 import bookServices from '../../services/bookServices'
 const GET_BOOKS = 'bookstore/book/GET_BOOKS'
@@ -19,10 +18,18 @@ export const getBooks = () => async dispatch => {
 	}
 }
 
-export const addBook = book => async dispatch => ({
-	type: ADD_BOOK,
-	payload: book,
-})
+export const addBook = book => async dispatch => {
+  try {
+		const result = await bookServices.sendToServer(book)
+		dispatch({
+			type: ADD_BOOK,
+			payload: result,
+		})
+	} catch (error) {
+		return error
+	}
+
+}
 
 export const removeBook = id => async dispatch => ({
 	type: REMOVE_BOOK,
