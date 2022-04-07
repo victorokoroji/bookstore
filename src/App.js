@@ -4,7 +4,10 @@ import BooksPage from './pages/BooksPage';
 import CategoryPage from './pages/CategoryPage';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import bookServices from './services/bookServices';
 
+
+bookServices.getID()
 const App = () => (
   <div className="main">
     <section>
