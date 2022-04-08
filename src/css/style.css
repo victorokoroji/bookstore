@@ -12,8 +12,9 @@
 :root {
 	--blue: #0290ff;
 	--pale-white: #e8e8e8;
-  --gray: #cac6c6;
-  --black: #000;
+	--gray: #cac6c6;
+	--black: #000;
+	--white: #fff;
 }
 
 body {
@@ -26,25 +27,24 @@ body {
 /* header styling here */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 	padding: 1% 5%;
-  border-bottom: 1px solid var(--gray);
+	border-bottom: 1px solid var(--gray);
 }
 
 header .left-content {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-  gap: 30px;
-
+	gap: 30px;
 }
 
 header h1 {
-  font-size: 1.875rem;
-  color: var(--blue);
+	font-size: 1.875rem;
+	color: var(--blue);
 }
 
 /* nav items styling here */
@@ -57,20 +57,20 @@ header h1 {
 }
 
 .nav-list li {
-  list-style: none;
+	list-style: none;
 }
 
 .nav-list li a {
 	font-size: 0.813rem;
 	text-align: center;
-  text-decoration: none;
-  color: var(--gray);
+	text-decoration: none;
+	color: var(--gray);
 }
 
 .active {
 	border-bottom: 2px solid var(--blue);
-  font-weight: 600;
-  color: gray;
+	font-weight: 600;
+	color: gray;
 }
 
 .user {
@@ -108,7 +108,7 @@ header h1 {
 	font-size: 1.375rem;
 	font-weight: bold;
 	color: #121212;
-  font-family: 'Times New Roman', Times, serif;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 .author {
@@ -149,14 +149,14 @@ header h1 {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-  gap: 0;
+	gap: 0;
 }
 
 .percent {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 2rem;
 	color: var(--black);
-  font-weight: bolder;
+	font-weight: bolder;
 }
 
 .completed {
@@ -229,10 +229,9 @@ header h1 {
 	stroke-dashoffset: 250;
 }
 
+/* form styling starts here */
+
 .form-container {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	margin: 60px 5vw;
 	border: 0.5px solid grey;
 	border-left: none;
@@ -244,12 +243,8 @@ header h1 {
 	min-width: 10.875rem;
 	height: 1.5rem;
 	margin: 1.813rem 32.75rem 1.188rem 0;
-	font-family: 'Roboto Slab', serif;
 	font-size: 1.25rem;
 	font-weight: bolder;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
 	letter-spacing: -0.18px;
 	color: rgb(128, 121, 121);
 }
@@ -257,24 +252,20 @@ header h1 {
 .add-book-btn {
 	border: none;
 	background-color: var(--blue);
-	width: 10.875rem;
-	color: white;
-	height: 2.813rem;
+	color: var(--white);
+	padding: 15px 30px;
 	border-radius: 5px;
 }
 
 .book-title,
 .book-author,
-.book-chapters,
 .book-category {
-	box-sizing: border-box;
 	border-radius: 4px;
 	border: solid 1px var(--pale-white);
 	background-color: #fff;
-	width: 200px;
-	padding: 15px;
-	margin: 5px 20px 20px 0;
-	height: 2.813rem;
+	padding: 15px 30px;
+	width: 100%;
+	margin-bottom: 15px;
 }
 
 .footer {
@@ -293,7 +284,7 @@ header h1 {
 	color: rgb(114, 101, 101);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
 	.user {
 		height: 50px;
 	}
@@ -305,5 +296,21 @@ header h1 {
 
 	.footer-text {
 		font-size: 1rem;
+	}
+
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 20px;
+	}
+
+	.book-title,
+	.book-author,
+	.book-category {
+		
+		width: initial;
+		margin-bottom: initial;
 	}
 }

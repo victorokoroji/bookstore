@@ -57,9 +57,9 @@ const Form = () => {
 	const { title, category, author } = book
 
 	return (
-		<div>
-			<h1>Add New Book</h1>
-			<form>
+		<div className='form-container'>
+			<h1 className='add-new'>Add New Book</h1>
+			<form className='form'>
 				<Input
 					type='text'
 					name='title'
@@ -73,7 +73,7 @@ const Form = () => {
 					name='author'
 					value={author}
 					placeholder='Author'
-					className='author'
+					className='book-author'
 					onChange={handleChange}
 				/>
 				<select
