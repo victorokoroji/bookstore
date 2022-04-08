@@ -14,6 +14,9 @@ const Form = () => {
     title: '',
     author: '',
     category: 'Fiction',
+    currentChapter: '0',
+    completed: '0%',
+    comments: [],
   });
 
   const bookCategories = [
@@ -40,18 +43,26 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook(book));
+    dispatch(
+      addBook({
+        ...book,
+        title: `${book.title}>${book.author}>${book.completed}>${book.currentChapter}>${
+          book.comments
+        }>${new Date().getTime()}`,
+      }),
+    );
     document.querySelector('form').reset();
   };
+  const { title, category, author } = book;
 
   return (
-    <div>
-      <h1>Add New Book</h1>
-      <form>
+    <div className="form-container">
+      <h1 className="add-new">Add New Book</h1>
+      <form className="form">
         <Input
           type="text"
           name="title"
-          value={book.title}
+          value={title}
           placeholder="Book title"
           className="book-title"
           onChange={handleChange}
@@ -59,16 +70,16 @@ const Form = () => {
         <Input
           type="text"
           name="author"
-          value={book.author}
+          value={author}
           placeholder="Author"
-          className="author"
+          className="book-author"
           onChange={handleChange}
         />
         <select
           className="book-category"
           name="category"
           onChange={handleChange}
-          value={book.category}
+          value={category}
           id="books"
         >
           {Options()}

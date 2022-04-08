@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Input = ({
   type, className, placeholder, name, value, onChange,
 }) => (
-  <div>
+  <>
     <input
       type={type}
       name={name}
@@ -13,7 +13,7 @@ const Input = ({
       placeholder={placeholder}
       onChange={onChange}
     />
-  </div>
+  </>
 );
 
 Input.propTypes = {

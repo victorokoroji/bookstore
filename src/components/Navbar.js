@@ -2,15 +2,15 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav className="navBar">
-    <ul>
+  <nav>
+    <ul className="nav-list">
       <li>
-        <NavLink to="/" className={(navLink) => (navLink.isActie ? 'active' : 'none')}>
+        <NavLink to="/" className={(navLink) => (navLink.isActive ? 'active' : 'none')}>
           BOOKS
         </NavLink>
       </li>
       <li>
-        <NavLink to="Categories" className={(navLink) => (navLink.isActie ? 'active' : 'none')}>
+        <NavLink to="/categories" className={(navLink) => (navLink.isActive ? 'active' : 'none')}>
           CATEGORY
         </NavLink>
       </li>
