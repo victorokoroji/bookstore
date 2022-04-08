@@ -37,18 +37,23 @@ const sendToServer = async(book) => {
 	}
 }
 
+const removeFromServer = id => {
+	const config = {
+		method: 'DELETE',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ item_id: id }),
+	}
 
-const removeFromServer = async (id) => {
-  try {
-    const res = await axios.delete(
-      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UT7NQsHrRxIY6vwPxxrv/books/${id}`,
-    );
-    const { data } = res;
-    return data;
-  } catch (error) {
-    return error;
-  }
-};
+	try {
+		const response = await fetch( `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UT7NQsHrRxIY6vwPxxrv/books/${id}`, config)
+		const datas = await response.text()
+		return datas
+	} catch (err) {
+		return err
+	}
+}
 
 const bookServices = {
   getFromServer,
