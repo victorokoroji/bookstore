@@ -10,16 +10,16 @@ const Book = ({ book }) => {
   const handleDelete = () => {
     dispatch(removeBook(book.id));
   };
-
+console.log(book);
   const { title, category,} = book
   const [title2, author, completed, currChapter] = title.split('>');
   return (
 		<div className='book'>
 			<div className='book-desc'>
 				<div className='book-obj'>
-					<div className='category'>{category}</div>
-					<div className='title'>{title2}</div>
-					<div className='author'>{author}</div>
+					<p className='category'>{category}</p>
+					<h1 className='title'>{title2}</h1>
+					<small className='author'>{author}</small>
 				</div>
 				<div className='part1-second'>
 					<Button className='comment-button' type='button'>

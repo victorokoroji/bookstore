@@ -36,7 +36,7 @@ const Form = () => {
 	const handleChange = e => {
 		const { name, value } = e.target
 		setBook(prevbook => ({
-			...prevbook,
+      ...prevbook,
 			item_id: uuidV4(),
 			[name]: value,
 		}))
@@ -47,13 +47,15 @@ const Form = () => {
 		dispatch(
 			addBook({
 				...book,
-				title: `${title}>${author}>${book.completed}>${book.currentChapter}>${book.comments}>${new Date().getTime()}`,
+				title: `${title}>${author}>${book.completed}>${book.currentChapter}>${
+					book.comments
+				}>${new Date().getTime()}`,
 			}),
 		)
 		document.querySelector('form').reset()
 	}
-  const { title, category, author} = book
-  
+	const { title, category, author } = book
+
 	return (
 		<div>
 			<h1>Add New Book</h1>
