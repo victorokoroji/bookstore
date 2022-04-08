@@ -17,7 +17,6 @@ const getFromServer = async () => {
 }
 
 const sendToServer = async(book) => {
-  console.log(book);
 	const config = {
 		method: 'POST',
 		headers: {
