@@ -15,8 +15,8 @@ const Book = ({ book }) => {
   const [title2, author, completed, currChapter] = title.split('>');
   return (
 		<div className='book'>
-			<div className='part1'>
-				<div className='part1-first'>
+			<div className='book-desc'>
+				<div className='book-obj'>
 					<div className='category'>{category}</div>
 					<div className='title'>{title2}</div>
 					<div className='author'>{author}</div>

@@ -39,8 +39,6 @@ const Form = () => {
 			...prevbook,
 			item_id: uuidV4(),
 			[name]: value,
-			completed: '0%',
-			currentChapter: '0',
 		}))
 	}
 
@@ -49,7 +47,7 @@ const Form = () => {
 		dispatch(
 			addBook({
 				...book,
-				title: `${title}>${author}>${completed}>${currChapter}>${comments}>${new Date().getTime()}`,
+				title: `${title}>${author}>${book.completed}>${book.currentChapter}>${book.comments}>${new Date().getTime()}`,
 			}),
 		)
 		document.querySelector('form').reset()

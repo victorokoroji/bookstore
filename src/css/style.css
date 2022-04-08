@@ -13,6 +13,7 @@
 	--blue: #0290ff;
 	--pale-white: #e8e8e8;
   --gray: #cac6c6;
+
 }
 
 body {
@@ -98,16 +99,14 @@ header h1 {
 }
 
 .category {
-	font-family: sans-serif;
 	font-size: 0.9rem;
 	font-weight: bolder;
-	color: #929292;
+	color: var(--gray);
 }
 
 .title {
 	font-size: 1.375rem;
 	font-weight: bold;
-	font-family: 'Roboto Slab', serif;
 	color: #121212;
 	margin-top: 5px;
 }
@@ -116,11 +115,7 @@ header h1 {
 	font-family: 'Roboto Slab', serif;
 	font-size: 0.875rem;
 	font-weight: 300;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #4386bf;
+	color: var(--blue);
 }
 
 .current-chapter {
