@@ -6,8 +6,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import bookServices from './services/bookServices';
 
-
-bookServices.getID()
+bookServices.sendToServer();
 const App = () => (
   <div className="main">
     <section>

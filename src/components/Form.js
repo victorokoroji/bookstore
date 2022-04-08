@@ -4,21 +4,36 @@ import { v4 as uuidV4 } from 'uuid';
 import Button from './Button';
 import Input from './Input';
 import { addBook } from '../redux/books/books';
+import Option from './Option';
 
 const Form = () => {
   const dispatch = useDispatch();
 
   const [book, setBook] = useState({
-    id: '',
+    item_id: '',
     title: '',
     author: '',
+    category: 'Fiction',
+  });
+
+  const bookCategories = [
+    { value: 'Fiction', content: 'Fiction' },
+    { value: 'Nonfiction', content: 'Nonfiction' },
+    { value: 'Drama', content: 'Drama' },
+    { value: 'Folktale', content: 'Folktale' },
+    { value: 'Poetry', content: 'Poetry' },
+  ];
+
+  const Options = () => bookCategories.map((category, index) => {
+    const { value, content } = category;
+    return <Option key={uuidV4()} index={index} value={value} content={content} />;
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBook((prevbook) => ({
       ...prevbook,
-      id: uuidV4(),
+      item_id: uuidV4(),
       [name]: value,
     }));
   };
@@ -49,6 +64,15 @@ const Form = () => {
           className="author"
           onChange={handleChange}
         />
+        <select
+          className="book-category"
+          name="category"
+          onChange={handleChange}
+          value={book.category}
+          id="books"
+        >
+          {Options()}
+        </select>
         <Button type="button" className="add-book-btn" onClick={handleSubmit}>
           ADD BOOK
         </Button>
