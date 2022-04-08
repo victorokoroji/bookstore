@@ -12,6 +12,7 @@
 :root {
 	--blue: #0290ff;
 	--pale-white: #e8e8e8;
+  --gray: #cac6c6;
 }
 
 body {
@@ -21,18 +22,35 @@ body {
 	position: relative;
 }
 
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* padding: 0 5vw; */
-	/* border-bottom: 1px solid #b4a9a9; */
-	/* margin-bottom: 60px; */
+/* header styling here */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+	padding: 1% 5%;
+  border-bottom: 1px solid var(--gray);
 }
+
+header .left-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+  gap: 30px;
+
+}
+
+header h1 {
+  font-size: 1.875rem;
+  color: var(--blue);
+}
+
+/* nav items styling here */
 
 .nav-list {
 	display: flex;
-	gap: 10px;
+	gap: 30px;
 	justify-content: flex-start;
 	align-items: center;
 }
@@ -42,14 +60,27 @@ body {
 }
 
 .nav-list li a {
-	font-size: 0.9rem;
+	font-size: 0.813rem;
 	text-align: center;
   text-decoration: none;
+  color: var(--gray);
 }
 
 .active {
 	border-bottom: 2px solid var(--blue);
   font-weight: 600;
+  color: gray;
+}
+
+.user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 30px;
+	color: var(--blue);
+	border: 1px solid var(--gray);
+	border-radius: 100%;
 }
 
 .first {
@@ -66,37 +97,6 @@ body {
 .category-page {
 	text-align: center;
 	font-size: 2rem;
-}
-
-.user {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px;
-	height: 45px;
-	margin-left: 5px;
-	color: var(--blue);
-	border: 1px solid #b4a9a9;
-	border-radius: 100%;
-}
-
-.app-name {
-	color: #0290ff;
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.name-list-container {
-	display: flex;
-}
-
-.list-items {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-	gap: 2rem;
-	margin: 0;
-	padding: 0;
 }
 
 .book {

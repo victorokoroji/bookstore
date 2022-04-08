@@ -1,11 +1,17 @@
-import React from 'react';
-import Navbar from './Navbar';
+import React from 'react'
+import Navbar from './Navbar'
+import { FaUser } from 'react-icons/fa'
 
 const Header = () => (
-  <div>
-    <h1>Bookstore CMS</h1>
-    <Navbar />
-  </div>
-);
+	<header>
+		<div className='left-content'>
+			<h1>Bookstore CMS</h1>
+			<Navbar />
+		</div>
+		<div className='user'>
+			<FaUser className='fa-user' />
+		</div>
+	</header>
+)
 
-export default Header;
+export default Header
