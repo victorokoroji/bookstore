@@ -1,19 +1,19 @@
-import React from 'react';
-import propTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import Button from './Button';
-import { removeBook } from '../redux/books/books';
+import React from 'react'
+import propTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
+import Button from './Button'
+import { removeBook } from '../redux/books/books'
 
 const Book = ({ book }) => {
-  const dispatch = useDispatch();
+	const dispatch = useDispatch()
 
-  const handleDelete = () => {
-    dispatch(removeBook(book.id));
-  };
-console.log(book);
-  const { title, category,} = book
-  const [title2, author, completed, currChapter] = title.split('>');
-  return (
+	const handleDelete = () => {
+		dispatch(removeBook(book.id))
+	}
+	console.log(book)
+	const { title, category } = book
+	const [title2, author, completed, currChapter] = title.split('>')
+	return (
 		<div className='book'>
 			<div className='book-desc'>
 				<div className='book-obj'>
@@ -21,22 +21,16 @@ console.log(book);
 					<h1 className='title'>{title2}</h1>
 					<small className='author'>{author}</small>
 				</div>
-				<div className='part1-second'>
-					<Button className='comment-button' type='button'>
-						Comment
-					</Button>
-					|
-					<Button className='remove-button' type='button' onClick={handleDelete}>
+				<div className='obj-actions'>
+					<Button className='obj-btn'>Comment</Button>|
+					<Button className='obj-btn' onClick={handleDelete}>
 						Remove
 					</Button>
-					|
-					<Button className='edit-button' type='button'>
-						Edit
-					</Button>
+					|<Button className='obj-btn'>Edit</Button>
 				</div>
 			</div>
-			<div className='part2And3'>
-				<div className='part2'>
+			<div className='progress-chapter'>
+				<div className='progress'>
 					<svg className='svg' width='150' height='150'>
 						<circle className='circle-back' cx='50' cy='80' r='40' />
 						<circle className='circle-front' cx='50' cy='80' r='40' />
@@ -59,10 +53,10 @@ console.log(book);
 			</div>
 		</div>
 	)
-};
+}
 
 Book.propTypes = {
-  book: propTypes.objectOf(propTypes.oneOfType([propTypes.string, propTypes.number])).isRequired,
-};
+	book: propTypes.objectOf(propTypes.oneOfType([propTypes.string, propTypes.number])).isRequired,
+}
 
-export default Book;
+export default Book
