@@ -19,7 +19,7 @@ export const getBooks = () => async (dispatch) => {
 };
 
 export const addBook = (book) => async (dispatch) => {
-	try {
+  try {
     const result = await bookServices.sendToServer(book);
     return dispatch({
       type: ADD_BOOK,
@@ -35,7 +35,7 @@ export const removeBook = (id) => async (dispatch) => {
     await bookServices.removeFromServer(id);
     return dispatch({
       type: REMOVE_BOOK,
-      payload: { id },
+      payload: id,
     });
   } catch (error) {
     return error;
@@ -46,17 +46,17 @@ const bookReducer = (state = initialState, action) => {
   const { payload } = action;
   switch (action.type) {
     case GET_BOOKS:
-     return [
-				...Object.entries(payload).map(item => ({
-					id: item[0],
-					title: item[1][0].title,
-					author: item[1][0].author,
-				})),
-			]
+      return [
+        ...Object.entries(payload).map((item) => ({
+          id: item[0],
+          title: item[1][0].title,
+          author: item[1][0].author,
+        })),
+      ];
     case ADD_BOOK:
       return [...state, payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== payload.id);
+      return state.filter((book) => book.id !== payload);
     default:
       return state;
   }

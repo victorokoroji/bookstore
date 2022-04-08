@@ -6,20 +6,22 @@ import { getBooks } from '../redux/books/books';
 
 const AllBooks = () => {
   const books = useSelector((state) => state.bookReducer, shallowEqual);
-  console.log(books);
+
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-  return (
-		<>
-			{books.map(book => (
-				<Book key={book.id} book={book} />
-			))}
 
-			<Form />
-		</>
-	)
+  return (
+    <>
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
+
+      <Form />
+    </>
+  );
 };
 
 export default AllBooks;
