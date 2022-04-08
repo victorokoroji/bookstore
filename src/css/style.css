@@ -268,7 +268,7 @@ header h1 {
 	margin-bottom: 15px;
 }
 
-.footer {
+footer {
 	text-align: center;
 	border-top: 1px solid #b4a9a9;
 	height: 100px;
@@ -277,7 +277,6 @@ header h1 {
 }
 
 .footer-text {
-	font-family: 'Roboto Slab', serif;
 	font-size: 0.8rem;
 	padding: 0;
 	margin: 0;
