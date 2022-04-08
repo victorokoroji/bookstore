@@ -11,22 +11,15 @@ const Book = ({ book }) => {
     dispatch(removeBook(book.id));
   };
 
+  const { title, category,} = book
+  const [title2, author, completed, currChapter] = title.split('>');
   return (
-		// <div className='book'>
-		// 	<div className={book.id}>
-		// 		<ul>
-		// 			<li>{book.title}</li>
-		// 			<li>{book.author}</li>
-		// 		</ul>
-		// 		<Button onClick={handleDelete}>Remove</Button>
-		// 	</div>
-		// </div>
 		<div className='book'>
 			<div className='part1'>
 				<div className='part1-first'>
-					<div className='category'>{book.category}</div>
-					<div className='title'>{book.title}</div>
-					<div className='author'>{book.author}</div>
+					<div className='category'>{category}</div>
+					<div className='title'>{title2}</div>
+					<div className='author'>{author}</div>
 				</div>
 				<div className='part1-second'>
 					<Button className='comment-button' type='button'>
@@ -57,7 +50,7 @@ const Book = ({ book }) => {
 				<div className='part3'>
 					<div className='current-chapter'>Current Chapter</div>
 					<div className='chapter'>
-						<span className='capterXOfY'>{`Chapter ${currChapter} of ${chapters}`}</span>
+						<span className='capterXOfY'>{`Chapter ${currChapter}`}</span>
 					</div>
 					<Button className='update-button' type='button'>
 						Update Progress

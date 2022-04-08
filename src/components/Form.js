@@ -49,7 +49,7 @@ const Form = () => {
 		dispatch(
 			addBook({
 				...book,
-				title: `${title}>${author}>${completed}>${chapters}>${currChapter}>${comments}>${new Date().getTime()}`,
+				title: `${title}>${author}>${completed}>${currChapter}>${comments}>${new Date().getTime()}`,
 			}),
 		)
 		document.querySelector('form').reset()
