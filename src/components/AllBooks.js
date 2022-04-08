@@ -12,14 +12,14 @@ const AllBooks = () => {
     dispatch(getBooks());
   }, []);
   return (
-    <>
-      {books.map((book) => (
-        <Book key={book.id} book={book} />
-      ))}
+		<>
+			{books.map(book => (
+				<Book key={book.id} book={book} />
+			))}
 
-      <Form />
-    </>
-  );
+			<Form />
+		</>
+	)
 };
 
 export default AllBooks;

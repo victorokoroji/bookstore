@@ -1,4 +1,3 @@
-import axios from 'axios';
 
 const getFromServer = async () => {
 	const config = {
@@ -16,7 +15,7 @@ const getFromServer = async () => {
 	}
 }
 
-const sendToServer = async(book) => {
+const sendToServer = async (book) => {
 	const config = {
 		method: 'POST',
 		headers: {
@@ -37,7 +36,7 @@ const sendToServer = async(book) => {
 	}
 }
 
-const removeFromServer = id => {
+const removeFromServer = async (id) => {
 	const config = {
 		method: 'DELETE',
 		headers: {
