@@ -45,6 +45,7 @@ header .left-content {
 header h1 {
   font-size: 0.9rem;
   color: var(--blue);
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* nav items styling here */
@@ -106,19 +107,21 @@ header h1 {
   font-size: 0.9rem;
   font-weight: bolder;
   color: var(--gray);
+  font-family: 'Roboto Slab', serif;
 }
 
 .title {
   font-size: 1.375rem;
   font-weight: bold;
   color: #121212;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .author {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--blue);
+  font-family: 'Roboto Slab', serif;
 }
 
 .obj-actions {
@@ -158,6 +161,7 @@ header h1 {
   opacity: 0.5;
   font-size: 0.875rem;
   color: #121212;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .current-chapter {
@@ -227,6 +231,7 @@ header h1 {
 }
 
 .add-new {
+  font-family: 'Roboto Slab', serif;
   min-width: 10.875rem;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
@@ -264,6 +269,7 @@ footer {
 }
 
 .footer-text {
+  font-family: 'Roboto Slab', serif;
   font-size: 0.8rem;
   padding: 0;
   margin: 0;
