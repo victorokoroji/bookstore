@@ -31,7 +31,7 @@ const Book = ({ book }) => {
 			</div>
 			<div className='progress-chapter'>
 				<div className='progress'>
-					<svg className='svg' width='150' height='150'>
+					<svg className='svg' width='120' height='150'>
 						<circle className='circle-back' cx='50' cy='80' r='40' />
 						<circle className='circle-front' cx='50' cy='80' r='40' />
 					</svg>
@@ -41,7 +41,7 @@ const Book = ({ book }) => {
 					</div>
 				</div>
 				<div className='pipe' />
-				<div className='part3'>
+				<div>
 					<div className='current-chapter'>Current Chapter</div>
 					<div className='chapter'>
 						<span className='capterXOfY'>{`Chapter ${currChapter}`}</span>

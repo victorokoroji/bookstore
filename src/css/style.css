@@ -31,7 +31,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding: 1% 5%;
+	padding: 2% 5%;
 	border-bottom: 1px solid var(--gray);
 }
 
@@ -39,11 +39,11 @@ header .left-content {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 30px;
+	gap: 15px;
 }
 
 header h1 {
-	font-size: 1.875rem;
+	font-size: 0.9rem;
 	color: var(--blue);
 }
 
@@ -51,7 +51,7 @@ header h1 {
 
 .nav-list {
 	display: flex;
-	gap: 30px;
+	gap: 15px;
 	justify-content: flex-start;
 	align-items: center;
 }
@@ -61,7 +61,7 @@ header h1 {
 }
 
 .nav-list li a {
-	font-size: 0.813rem;
+	font-size: 0.7rem;
 	text-align: center;
 	text-decoration: none;
 	color: var(--gray);
@@ -78,7 +78,7 @@ header h1 {
 	justify-content: center;
 	align-items: center;
 	width: 50px;
-	height: 30px;
+	height: 50px;
 	color: var(--blue);
 	border: 1px solid var(--gray);
 	border-radius: 100%;
@@ -86,13 +86,17 @@ header h1 {
 
 /* book styling starts here */
 
+.all-books {
+	margin-top: 50px;
+}
+
 .book {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	margin: 30px 5vw;
-	padding: 15px 70px;
+	padding: 20px;
 	border: 0.5px solid grey;
 	border-radius: 5px;
 	min-height: 150px;
@@ -136,15 +140,6 @@ header h1 {
 	color: rgb(13, 32, 32);
 }
 
-.progress-chapter {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 5vw;
-	padding-right: 10vw;
-}
-
 .progress {
 	display: flex;
 	align-items: center;
@@ -175,14 +170,6 @@ header h1 {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #121212;
-}
-
-.pipe {
-	border: 1px solid;
-	border-left: none;
-	border-top: none;
-	border-bottom: none;
-	height: 50px;
 }
 
 .item {
@@ -284,6 +271,24 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+
+	header h1 {
+		font-size: 1.875rem;
+	}
+
+  header .left-content {
+    gap: 30px;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  .nav-list li a {
+    font-size: 0.87rem;
+  }
+
 	.user {
 		height: 50px;
 	}
@@ -291,6 +296,27 @@ footer {
 	.app-name {
 		font-size: 1.875rem;
 		margin-right: 20px;
+	}
+
+	.book {
+		padding: 15px 70px;
+	}
+
+	.progress-chapter {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 5vw;
+		padding-right: 10vw;
+	}
+
+	.pipe {
+		border: 1px solid;
+		border-left: none;
+		border-top: none;
+		border-bottom: none;
+		height: 50px;
 	}
 
 	.footer-text {
@@ -308,7 +334,6 @@ footer {
 	.book-title,
 	.book-author,
 	.book-category {
-		
 		width: initial;
 		margin-bottom: initial;
 	}
