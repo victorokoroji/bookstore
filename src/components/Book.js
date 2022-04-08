@@ -12,16 +12,60 @@ const Book = ({ book }) => {
   };
 
   return (
-    <>
-      <div className={book.id}>
-        <ul>
-          <li>{book.title}</li>
-          <li>{book.author}</li>
-        </ul>
-        <Button onClick={handleDelete}>Remove</Button>
-      </div>
-    </>
-  );
+		// <div className='book'>
+		// 	<div className={book.id}>
+		// 		<ul>
+		// 			<li>{book.title}</li>
+		// 			<li>{book.author}</li>
+		// 		</ul>
+		// 		<Button onClick={handleDelete}>Remove</Button>
+		// 	</div>
+		// </div>
+		<div className='book'>
+			<div className='part1'>
+				<div className='part1-first'>
+					<div className='category'>{book.category}</div>
+					<div className='title'>{book.title}</div>
+					<div className='author'>{book.author}</div>
+				</div>
+				<div className='part1-second'>
+					<Button className='comment-button' type='button'>
+						Comment
+					</Button>
+					|
+					<Button className='remove-button' type='button' onClick={handleDelete}>
+						Remove
+					</Button>
+					|
+					<Button className='edit-button' type='button'>
+						Edit
+					</Button>
+				</div>
+			</div>
+			<div className='part2And3'>
+				<div className='part2'>
+					<svg className='svg' width='150' height='150'>
+						<circle className='circle-back' cx='50' cy='80' r='40' />
+						<circle className='circle-front' cx='50' cy='80' r='40' />
+					</svg>
+					<div>
+						<div className='percent'>{completed}</div>
+						<div className='completed'>completed</div>
+					</div>
+				</div>
+				<div className='pipe' />
+				<div className='part3'>
+					<div className='current-chapter'>Current Chapter</div>
+					<div className='chapter'>
+						<span className='capterXOfY'>{`Chapter ${currChapter} of ${chapters}`}</span>
+					</div>
+					<Button className='update-button' type='button'>
+						Update Progress
+					</Button>
+				</div>
+			</div>
+		</div>
+	)
 };
 
 Book.propTypes = {
