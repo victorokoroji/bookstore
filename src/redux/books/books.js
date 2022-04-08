@@ -50,7 +50,7 @@ const bookReducer = (state = initialState, action) => {
 				...Object.entries(payload).map(item => ({
 					id: item[0],
 					title: item[1][0].title,
-					category: item[1][0].category,
+					author: item[1][0].author,
 				})),
 			]
     case ADD_BOOK:
