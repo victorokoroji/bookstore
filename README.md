@@ -4,6 +4,8 @@
 
 This is a React application for managing books you want to read. It tracks your progress and makes the reading the books enlisted as a goal. The project is built using HTML, CSS, JavaScript, React, and Redux.
 
+![screenshot](./src/images/screenshot.png)
+
 ### Features implemented so far are:
 
 - Project Setup with React Installations
