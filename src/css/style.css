@@ -21,20 +21,35 @@ body {
 	position: relative;
 }
 
-.main {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
 .navbar {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
-	padding: 0 5vw;
-	border-bottom: 1px solid #b4a9a9;
-	margin-bottom: 60px;
+	align-items: center;
+	/* padding: 0 5vw; */
+	/* border-bottom: 1px solid #b4a9a9; */
+	/* margin-bottom: 60px; */
+}
+
+.nav-list {
+	display: flex;
+	gap: 10px;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li a {
+	font-size: 0.9rem;
+	text-align: center;
+  text-decoration: none;
+}
+
+.active {
+	border-bottom: 2px solid var(--blue);
+  font-weight: 600;
 }
 
 .first {
