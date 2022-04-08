@@ -14,7 +14,7 @@ const AllBooks = () => {
   }, []);
 
   return (
-    <div className='all-books'>
+    <div className="all-books">
       {books.map((book) => (
         <Book key={book.id} book={book} />
       ))}
