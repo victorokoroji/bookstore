@@ -1,16 +1,20 @@
 import axios from 'axios';
 
 const getFromServer = async () => {
-  try {
-    const res = await axios.get(
-      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UT7NQsHrRxIY6vwPxxrv/books/',
-    );
-    const datas = res.data;
-    return datas;
-  } catch (error) {
-    return error;
-  }
-};
+	const config = {
+		method: 'GET'
+	}
+	try {
+		const response = await fetch(
+			`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UT7NQsHrRxIY6vwPxxrv/books`,
+			config,
+		)
+    const datas = await response.json()
+		return datas
+	} catch (err) {
+		return err
+	}
+}
 
 const sendToServer = async(book) => {
   console.log(book);
@@ -27,11 +31,9 @@ const sendToServer = async(book) => {
 			`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UT7NQsHrRxIY6vwPxxrv/books`,
 			config,
     )
-    console.log(response);
     const datas = await response.text()
 		return datas
   } catch (err) {
-    console.log(err);
 		return err
 	}
 }

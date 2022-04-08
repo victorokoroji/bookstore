@@ -9,7 +9,6 @@ const initialState = [];
 export const getBooks = () => async (dispatch) => {
   try {
     const result = await bookServices.getFromServer();
-
     return dispatch({
       type: GET_BOOKS,
       payload: result,
@@ -22,7 +21,6 @@ export const getBooks = () => async (dispatch) => {
 export const addBook = (book) => async (dispatch) => {
 	try {
     const result = await bookServices.sendToServer(book);
-    console.log(result);
     return dispatch({
       type: ADD_BOOK,
       payload: result,
