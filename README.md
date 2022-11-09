@@ -15,7 +15,7 @@ This is a React application for managing books you want to read. It tracks your 
 - Linters
 ## Live Demo
 
-[Live Demo Link](https://mybookstorewebapp.herokuapp.com/)
+[Live Demo Link](https://bookstore.up.railway.app/)
 
 ### Prerequisites
 
